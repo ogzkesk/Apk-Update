@@ -13,8 +13,8 @@ android {
         applicationId = "com.ogzkesk.test"
         minSdk = 26
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 3
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -24,16 +24,12 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            firebaseAppDistribution {
-                artifactType = "APK"
-                releaseNotesFile = "/path/to/releasenotes.txt"
-//                testers = "ogz.kskn57@gmail.com"
-            }
         }
     }
     compileOptions {
