@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                     // Convert to bottomSheet or dialog
 
                     try {
-                        val downloadApk = DownloadApk(this@MainActivity)
+                        val downloadApk =       DownloadApk(this@MainActivity)
                         downloadApk.startDownloadingApk(newVersion.versionUrl)
                     } catch (e: Exception) {
                         runOnUiThread {
@@ -64,10 +64,18 @@ class MainActivity : AppCompatActivity() {
 
             TestTheme {
                 Scaffold(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier
+                        .fillMaxSize(
+
+
+                        ),
 //                    containerColor = Color.Red
                 ) {
-                    it.calculateTopPadding()
+                    it
+                        .calculateTopPadding(
+
+
+                        )
                     Greeting()
                 }
             }
@@ -164,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
                 false
-            }else {
+            } else {
                 true
             }
         }
