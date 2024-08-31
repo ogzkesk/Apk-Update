@@ -2,7 +2,7 @@ name: On Pull Request Opened
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   lint:
@@ -10,6 +10,6 @@ jobs:
     uses: ./.github/workflows/job_lint_debug.yml
 
   test:
-    name: Unit test debug
+    name: Test debug
     needs: lint
     uses: ./.github/workflows/job_test_debug.yml
