@@ -13,8 +13,3 @@ jobs:
     name: Test debug
     needs: lint
     uses: ./.github/workflows/job_test_debug.yml
-
-  distribution:
-    name: Firebase app distribution
-    needs: test
-    uses: ./.github/workflows/job_distribution.yml
